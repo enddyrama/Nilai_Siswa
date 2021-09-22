@@ -1,25 +1,28 @@
+const scoreIndicator = (name, score) => {
+    if (score >= 80 && score <= 100) {
+        return `${name} mendapatkan nilai A`
+    } else if (score >= 65 && score <= 79) {
+        return `${name} mendapatkan nilai B`
+    } else if (score >= 50 && score <= 64) {
+        return `${name} mendapatkan nilai C`
+    } else if (score >= 35 && score <= 49) {
+        return `${name} mendapatkan nilai D`
+    } else if (score >= 0 && score <= 34) {
+        return `${name} mendapatkan nilai E`
+    } else {
+        return 'Nilai Invalid'
+    }
+}
 
-/**
-Buatlah sebuah script untuk menampilkan nama & nilai dari siswa di kelas :
-Seorang pengajar sedang memeriksa ujian mahasiswa dan akan memberikan desc nilai dari A-E dengan ketentuan sebagai berikut:
- - Nilai 80 - 100: A
- - Nilai 65 - 79: B
- - Nilai 50 - 64: C
- - Nilai 35 - 49: D
- - Nilai 0 - 34: E
 
- Tampilkan desc nilai dan nama siswa saat pengajar tersebut memasukkan nilai dan nama yang dia inginkan.
 
-NOTED:
-Jika nilai mahasiswa kurang dari 0 atau lebih dari 100 maka tampilkan 'Nilai Invalid'
-contoh : 
-1.
-name = 'Rocky'
-nilai = '90'
-output : 'Nilai Rocky mendapatkan nilai A'
 
-name = 'John Doe'
-nilai = '0'
-output : 'Nilai Invalid
 
-**/ 
+
+console.log(scoreIndicator('Rocky', 90))
+console.log(scoreIndicator('Lanang', 70))
+console.log(scoreIndicator('Prom', 60))
+console.log(scoreIndicator('Bitch', 45))
+console.log(scoreIndicator('Dana', 30))
+console.log(scoreIndicator('Boi', 101))
+console.log(scoreIndicator('Boi', -1))
